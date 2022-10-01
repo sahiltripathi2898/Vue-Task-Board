@@ -43,7 +43,7 @@ export default {
 }
 #completed-container {
   padding: 10px;
-  height: 500px;
+  min-height: 500px;
   width: 350px;
   border: 2px black solid;
 }
