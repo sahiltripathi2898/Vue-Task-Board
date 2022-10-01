@@ -1,8 +1,7 @@
+import { tasks } from '../constants/constants'
+
 function State() {
-  this.selected = []
-  this.progress = []
-  this.finished = []
-  this.name = 'Sahil'
+  this.tasks = tasks
 }
 
 export default new State()

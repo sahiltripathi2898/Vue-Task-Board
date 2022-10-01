@@ -1,17 +1,16 @@
 <template>
   <div>
-    Hello World
-    {{getName}}
+    <TaskBoard/>
   </div>
 </template>
 
 <script>
+import TaskBoard from './views/Board/index.vue'
+
 export default {
   name: 'App',
-  computed: {
-    getName() {
-      return this.$store.state.name
-    }
+  components: {
+    TaskBoard
   }
 }
 </script>
