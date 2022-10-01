@@ -1,5 +1,13 @@
+import { cloneDeep } from 'lodash'
+
 export default {
-  UPDATE_INPROGRESS_DATA(state, data) {
-    state.progress = data
-  }
+  UPDATE_TASKS_DATA(state, data) {
+    let currTasks = cloneDeep(state.tasks)
+    currTasks.forEach((task) => {
+      if (task.id === data.key) {
+        task.status = data.updatedStatus
+      }
+    })
+    state.tasks = currTasks
+  },
 }

@@ -5,7 +5,7 @@
     </div>
     <div id="selected-content">
       <div v-for="task in getTasksInSelectedStatus" :key="task.id">
-        <Card :cardDetails="task" @select-change="onCardStatusChange"/>
+        <Card :cardDetails="task" status="selected" @select-change="onCardStatusChange"/>
       </div>
     </div>
   </div>
@@ -28,7 +28,10 @@ export default {
   },
   methods: {
     onCardStatusChange(id, status) {
-      console.log(id, status)
+      this.$store.dispatch('updateTasksData', {
+        key: id,
+        updatedStatus: status
+      })
     }
   }
 }
@@ -40,8 +43,8 @@ export default {
 }
 #selected-container {
   padding: 10px;
-  height: 500px;
   width: 350px;
+  min-height: 500px;
   border: 2px black solid;
 }
 </style>

@@ -43,10 +43,10 @@ export const tasks = [
     title: 'NCW shows blank screen',
     description: 'A tagline for a car company that prides itself on its morals and ethics'
   },
-  // Finished
+  // Completed
   {
     id: v4(),
-    status: 'finished',
+    status: 'completed',
     title: 'One click infra',
     description: 'Are there Out-of-Stock photos'
   }

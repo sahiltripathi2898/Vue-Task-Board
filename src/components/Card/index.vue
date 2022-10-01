@@ -23,6 +23,10 @@ export default {
       type: Object,
       default: () => {},
     },
+    status: {
+      type: String,
+      default: '',
+    },
   },
   methods: {
     onSelectChange(event) {
